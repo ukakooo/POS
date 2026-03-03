@@ -10,6 +10,8 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', [App\Http\Controllers\PageController::class, 'index']);
 
+Route::get('/level', [App\Http\Controllers\LevelController::class, 'index']);
+
 Route::get('/category', [App\Http\Controllers\ProductController::class, 'products']);
 
 Route::prefix('category')->group(function () {
