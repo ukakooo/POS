@@ -14,7 +14,16 @@ Route::get('/', [App\Http\Controllers\PageController::class, 'index']);
 
 Route::get('/level', [App\Http\Controllers\LevelController::class, 'index']);
 Route::get('/kategori', [App\Http\Controllers\KategoriController::class, 'index']);
+
 Route::get('/user', [App\Http\Controllers\UserController::class, 'index']);
+
+Route::get('/user/tambah', [UserController::class, 'tambah']);
+Route::post('/user/tambah_simpan', [UserController::class, 'tambah_simpan']);
+
+Route::get('/user/ubah/{id}', [UserController::class, 'ubah']);
+Route::put('/user/ubah_simpan/{id}', [UserController::class, 'ubah_simpan']);
+
+Route::get('/user/hapus/{id}', [UserController::class, 'hapus']);
 
 Route::get('/category', [App\Http\Controllers\ProductController::class, 'products']);
 
